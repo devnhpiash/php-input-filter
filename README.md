@@ -62,7 +62,7 @@ php-input-filter/
 ## 🙌 Contributing
 
 Contributions, issues, and feature requests are welcome!  
-Feel free to check the [issues page](https://github.com/devnhpiash/php-user-input-filter/issues) if you'd like to collaborate.
+Feel free to check the [issues page](https://github.com/devnhpiash/php-input-filter-package/issues) if you'd like to collaborate.
 
 ---
 
