@@ -1,0 +1,79 @@
+PHP Input Filter Library - Documentation
+========================================
+
+Author: Nazmul Hasan Piash
+Email : developer.nhpiash@gmail.com
+GitHub: https://github.com/devnhpiash/php-input-filter-package
+
+Overview:
+---------
+The PHP Input Filter Library is a lightweight, reusable utility to help sanitize and validate user inputs.
+It protects your application from common attacks such as XSS, SQL Injection, and malformed inputs by using standard filtering techniques.
+
+Included Methods:
+-----------------
+1. getString($input)
+   - Description: Strips HTML tags, trims whitespace, and converts special characters to HTML entities.
+   - Usage: InputFilter::getString($_POST['name']);
+
+2. getInt($input)
+   - Description: Validates and returns an integer. Returns false if invalid.
+   - Usage: InputFilter::getInt($_POST['age']);
+
+3. getEmail($input)
+   - Description: Validates that the input is a properly formatted email.
+   - Usage: InputFilter::getEmail($_POST['email']);
+
+4. getSanitizedEmail($input)
+   - Description: Removes all illegal characters from an email address.
+   - Usage: InputFilter::getSanitizedEmail($_POST['email']);
+
+5. getURL($input)
+   - Description: Validates a properly formatted URL.
+   - Usage: InputFilter::getURL($_POST['website']);
+
+6. getSanitizedURL($input)
+   - Description: Removes illegal URL characters.
+   - Usage: InputFilter::getSanitizedURL($_POST['website']);
+
+7. getBoolean($input)
+   - Description: Validates boolean input. Returns true, false, or null if invalid.
+   - Usage: InputFilter::getBoolean($_POST['agreed']);
+
+8. getFilteredArray($inputArray, $filterType = 'string')
+   - Description: Accepts an array of values and filters them all using the provided type.
+   - Supported filter types: string, int, email, url, boolean
+   - Usage:
+     InputFilter::getFilteredArray($_POST, 'email');
+
+Examples:
+---------
+$name = InputFilter::getString($_POST['name']);
+$age = InputFilter::getInt($_POST['age']);
+$email = InputFilter::getEmail($_POST['email']);
+$website = InputFilter::getSanitizedURL($_POST['website']);
+$termsAccepted = InputFilter::getBoolean($_POST['terms']);
+
+Benefits:
+---------
+- Easy integration into any PHP project.
+- Protects against invalid or malicious input.
+- Centralized and reusable input validation logic.
+- Lightweight and framework-independent.
+
+## How to Use
+Include via Composer:
+```php
+require_once __DIR__ . '/vendor/autoload.php';
+use Nhpiash\InputFilter\InputFilter;
+$name = InputFilter::getString($_POST['name']);
+$age = InputFilter::getInt($_POST['age']);
+$email = InputFilter::getEmail($_POST['email']);
+$website = InputFilter::getSanitizedURL($_POST['website']);
+$termsAccepted = InputFilter::getBoolean($_POST['terms']);
+```
+
+Author:
+-------
+Created by: Nazmul Hasan Piash
+License: MIT

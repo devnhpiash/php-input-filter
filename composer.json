@@ -1,0 +1,21 @@
+{
+  "name": "nhpiash/php-input-filter",
+  "description": "A lightweight and reusable PHP package to sanitize and validate user inputs like strings, integers, emails, URLs, booleans, and arrays.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Nhpiash\\InputFilter\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Nazmul Hasan Piash",
+      "email": "developer.nhpiash@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "minimum-stability": "stable"
+}
